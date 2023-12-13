@@ -4,5 +4,5 @@ def pushtodocker(String IMAGE_NAME,String DOCKER_CREDENTIALS_ID){
                 
                     docker.withRegistry('https://registry.hub.docker.com', DOCKER_CREDENTIALS_ID) {
                         dockerImage.push()
-
+                    }
 }
