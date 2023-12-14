@@ -9,7 +9,9 @@ def pushtonexus(String NEXUS_USERNAME,String NEXUS_PASSWORD,String NEXUS_URL,Str
 
                         // Print deployment information
                         echo "Artifact deployed to Nexus with version ${currentVersion}"
-                        return curlcommand
+                        def deployedVersion = "${currentVersion}.${env.BUILD_ID}"
+                       echo "Deployed Version: ${deployedVersion}"
+                        return deployedVersion
 
 
   
